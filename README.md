@@ -27,7 +27,7 @@ More detail [Click Me](https://doodstream.com/)
 
 ## Install
 ```bash
-pip install git+https://github.com/p4uladam/DoodStream
+pip install git+https://github.com/p4uladam/DoodStream.git
 ```
 ---
 
