@@ -56,12 +56,7 @@ class DoodStream:
         filename = path.split("/")[-1]
         post_files = {"file": (filename, open(path, "rb"))}
         up = requests.post(url_for_upload, data=post_data, files=post_files)
-        st = re.findall(r'name="st">(.*?)</text' , str(up.text))
-        fn = re.findall(r'name="fn">(.*?)</text' , str(up.text))
-        if st[0] == "OK":
-            return {"status": st[0], "file_id": fn[0], "file_url": f"https://doodstream.com/d/{fn[0]}"}
-        else:
-            raise TypeError(f"unsupported video format {filename}, please upload video with mkv, mp4, wmv, avi, mpeg4, mpegps, flv, 3gp, webm, mov, mpg & m4v format")
+        return str(up.text)
         
     def remote_upload(self, direct_link):
         '''Upload files using direct links
