@@ -27,13 +27,15 @@ More detail [Click Me](https://doodstream.com/)
 
 ## Install
 ```bash
-pip install doodstream
+pip install git+https://github.com/p4uladam/DoodStream
 ```
 ---
 
 ## Usage
 
 You can use this as python module or via terminal
+
+To get the download link remove characters from string using `[88:-426]`
 
 ### Use as python module
 ```python
